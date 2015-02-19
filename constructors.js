@@ -113,8 +113,8 @@ console.assert(cat.growl() === "meow");
 // prototype that is called `squeal` that returns the secret string.
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
-
-var KeepTopSecret = (function() {
+//callback
+var KeepSecret = (function() {
   //create a variable
   var mySecret;
 
@@ -122,17 +122,16 @@ var KeepTopSecret = (function() {
         function KeepSecret(secret){
         //private var
             topSecret = secret;
-              	
+        }      	
          //method squeal on it's prototype
-	     KeepSecret.prototype = {
-		   squeal: function(){
-           //return variable		
-           return topSecret;
-          }
-         }
-        }  
-
-return KeepTopSecret;
+	      KeepSecret.prototype = {
+		        squeal: function(){
+            //return variable		
+            return topSecret;
+            }
+        }
+ 
+return KeepSecret;
 
 })();
 
